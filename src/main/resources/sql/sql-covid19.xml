@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitc.xml.mapper.Covid19InfoStateMapper">
+	<select id="getDbItemList" resultType="com.bitc.xml.dto.Covid19InfoStateItemDto">
+		<![CDATA[
+			select
+				seq, state_dt, state_time, decide_cnt, clear_cnt, care_cnt,
+				death_cnt, exam_cnt, acc_exam_cnt
+			from
+				covid19state
+		]]>
+	</select>
+</mapper>
